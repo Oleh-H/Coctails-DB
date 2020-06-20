@@ -9,10 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    let network = Network()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        network.getDrinkCategories()
+        network.getDrincsOf(category: "Ordinary Drink")
     }
 
 

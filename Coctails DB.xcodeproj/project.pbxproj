@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F37A977837060A27EF425CC /* Pods_Coctails_DB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9079ED058E84A701EAB3D9C /* Pods_Coctails_DB.framework */; };
+		7A9911E9249E0540003395EA /* DrinkCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9911E7249E053F003395EA /* DrinkCategory.swift */; };
+		7A9911EA249E0540003395EA /* DrinkDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9911E8249E0540003395EA /* DrinkDetails.swift */; };
+		7A9911EC249E0562003395EA /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9911EB249E0562003395EA /* Network.swift */; };
+		7A9911EE249E074C003395EA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9911ED249E074C003395EA /* Constants.swift */; };
 		7AC905F0249E026800AB8827 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC905EF249E026800AB8827 /* AppDelegate.swift */; };
 		7AC905F2249E026800AB8827 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC905F1249E026800AB8827 /* SceneDelegate.swift */; };
 		7AC905F4249E026800AB8827 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC905F3249E026800AB8827 /* ViewController.swift */; };
@@ -27,6 +32,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		362BA1F55B0832230CF45F0D /* Pods-Coctails DB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coctails DB.release.xcconfig"; path = "Target Support Files/Pods-Coctails DB/Pods-Coctails DB.release.xcconfig"; sourceTree = "<group>"; };
+		74819668B18353C44780643E /* Pods-Coctails DB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coctails DB.debug.xcconfig"; path = "Target Support Files/Pods-Coctails DB/Pods-Coctails DB.debug.xcconfig"; sourceTree = "<group>"; };
+		7A9911E7249E053F003395EA /* DrinkCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkCategory.swift; sourceTree = "<group>"; };
+		7A9911E8249E0540003395EA /* DrinkDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkDetails.swift; sourceTree = "<group>"; };
+		7A9911EB249E0562003395EA /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		7A9911ED249E074C003395EA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7AC905EC249E026800AB8827 /* Coctails DB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coctails DB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC905EF249E026800AB8827 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AC905F1249E026800AB8827 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +49,7 @@
 		7AC90602249E026A00AB8827 /* Coctails DBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coctails DBTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC90606249E026A00AB8827 /* Coctails_DBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coctails_DBTests.swift; sourceTree = "<group>"; };
 		7AC90608249E026A00AB8827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9079ED058E84A701EAB3D9C /* Pods_Coctails_DB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coctails_DB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F37A977837060A27EF425CC /* Pods_Coctails_DB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +71,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36D8770E7BBFDC774E7D33F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9079ED058E84A701EAB3D9C /* Pods_Coctails_DB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		505F4C92C8855E7E570236E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74819668B18353C44780643E /* Pods-Coctails DB.debug.xcconfig */,
+				362BA1F55B0832230CF45F0D /* Pods-Coctails DB.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7AC905E3249E026800AB8827 = {
 			isa = PBXGroup;
 			children = (
 				7AC905EE249E026800AB8827 /* Coctails DB */,
 				7AC90605249E026A00AB8827 /* Coctails DBTests */,
 				7AC905ED249E026800AB8827 /* Products */,
+				505F4C92C8855E7E570236E4 /* Pods */,
+				36D8770E7BBFDC774E7D33F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +114,10 @@
 				7AC905EF249E026800AB8827 /* AppDelegate.swift */,
 				7AC905F1249E026800AB8827 /* SceneDelegate.swift */,
 				7AC905F3249E026800AB8827 /* ViewController.swift */,
+				7A9911E8249E0540003395EA /* DrinkDetails.swift */,
+				7A9911E7249E053F003395EA /* DrinkCategory.swift */,
+				7A9911EB249E0562003395EA /* Network.swift */,
+				7A9911ED249E074C003395EA /* Constants.swift */,
 				7AC905F5249E026800AB8827 /* Main.storyboard */,
 				7AC905F8249E026A00AB8827 /* Assets.xcassets */,
 				7AC905FA249E026A00AB8827 /* LaunchScreen.storyboard */,
@@ -106,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7AC9060B249E026A00AB8827 /* Build configuration list for PBXNativeTarget "Coctails DB" */;
 			buildPhases = (
+				65310018DF38964BBF286BC6 /* [CP] Check Pods Manifest.lock */,
 				7AC905E8249E026800AB8827 /* Sources */,
 				7AC905E9249E026800AB8827 /* Frameworks */,
 				7AC905EA249E026800AB8827 /* Resources */,
+				910E6D1926F48EA4E3D11B15 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,13 +233,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		65310018DF38964BBF286BC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Coctails DB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		910E6D1926F48EA4E3D11B15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coctails DB/Pods-Coctails DB-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coctails DB/Pods-Coctails DB-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coctails DB/Pods-Coctails DB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7AC905E8249E026800AB8827 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A9911E9249E0540003395EA /* DrinkCategory.swift in Sources */,
 				7AC905F4249E026800AB8827 /* ViewController.swift in Sources */,
+				7A9911EC249E0562003395EA /* Network.swift in Sources */,
 				7AC905F0249E026800AB8827 /* AppDelegate.swift in Sources */,
+				7A9911EE249E074C003395EA /* Constants.swift in Sources */,
+				7A9911EA249E0540003395EA /* DrinkDetails.swift in Sources */,
 				7AC905F2249E026800AB8827 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +444,7 @@
 		};
 		7AC9060C249E026A00AB8827 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74819668B18353C44780643E /* Pods-Coctails DB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +463,7 @@
 		};
 		7AC9060D249E026A00AB8827 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 362BA1F55B0832230CF45F0D /* Pods-Coctails DB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
