@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7AC905F0249E026800AB8827 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC905EF249E026800AB8827 /* AppDelegate.swift */; };
+		7AC905F2249E026800AB8827 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC905F1249E026800AB8827 /* SceneDelegate.swift */; };
+		7AC905F4249E026800AB8827 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC905F3249E026800AB8827 /* ViewController.swift */; };
+		7AC905F7249E026800AB8827 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AC905F5249E026800AB8827 /* Main.storyboard */; };
+		7AC905F9249E026A00AB8827 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AC905F8249E026A00AB8827 /* Assets.xcassets */; };
+		7AC905FC249E026A00AB8827 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AC905FA249E026A00AB8827 /* LaunchScreen.storyboard */; };
+		7AC90607249E026A00AB8827 /* Coctails_DBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC90606249E026A00AB8827 /* Coctails_DBTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7AC90603249E026A00AB8827 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AC905E4249E026800AB8827 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AC905EB249E026800AB8827;
+			remoteInfo = "Coctails DB";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7AC905EC249E026800AB8827 /* Coctails DB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coctails DB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AC905EF249E026800AB8827 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7AC905F1249E026800AB8827 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7AC905F3249E026800AB8827 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7AC905F6249E026800AB8827 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7AC905F8249E026A00AB8827 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7AC905FB249E026A00AB8827 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7AC905FD249E026A00AB8827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AC90602249E026A00AB8827 /* Coctails DBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coctails DBTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AC90606249E026A00AB8827 /* Coctails_DBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coctails_DBTests.swift; sourceTree = "<group>"; };
+		7AC90608249E026A00AB8827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7AC905E9249E026800AB8827 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AC905FF249E026A00AB8827 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7AC905E3249E026800AB8827 = {
+			isa = PBXGroup;
+			children = (
+				7AC905EE249E026800AB8827 /* Coctails DB */,
+				7AC90605249E026A00AB8827 /* Coctails DBTests */,
+				7AC905ED249E026800AB8827 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7AC905ED249E026800AB8827 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7AC905EC249E026800AB8827 /* Coctails DB.app */,
+				7AC90602249E026A00AB8827 /* Coctails DBTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7AC905EE249E026800AB8827 /* Coctails DB */ = {
+			isa = PBXGroup;
+			children = (
+				7AC905EF249E026800AB8827 /* AppDelegate.swift */,
+				7AC905F1249E026800AB8827 /* SceneDelegate.swift */,
+				7AC905F3249E026800AB8827 /* ViewController.swift */,
+				7AC905F5249E026800AB8827 /* Main.storyboard */,
+				7AC905F8249E026A00AB8827 /* Assets.xcassets */,
+				7AC905FA249E026A00AB8827 /* LaunchScreen.storyboard */,
+				7AC905FD249E026A00AB8827 /* Info.plist */,
+			);
+			path = "Coctails DB";
+			sourceTree = "<group>";
+		};
+		7AC90605249E026A00AB8827 /* Coctails DBTests */ = {
+			isa = PBXGroup;
+			children = (
+				7AC90606249E026A00AB8827 /* Coctails_DBTests.swift */,
+				7AC90608249E026A00AB8827 /* Info.plist */,
+			);
+			path = "Coctails DBTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7AC905EB249E026800AB8827 /* Coctails DB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AC9060B249E026A00AB8827 /* Build configuration list for PBXNativeTarget "Coctails DB" */;
+			buildPhases = (
+				7AC905E8249E026800AB8827 /* Sources */,
+				7AC905E9249E026800AB8827 /* Frameworks */,
+				7AC905EA249E026800AB8827 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Coctails DB";
+			productName = "Coctails DB";
+			productReference = 7AC905EC249E026800AB8827 /* Coctails DB.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7AC90601249E026A00AB8827 /* Coctails DBTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AC9060E249E026A00AB8827 /* Build configuration list for PBXNativeTarget "Coctails DBTests" */;
+			buildPhases = (
+				7AC905FE249E026A00AB8827 /* Sources */,
+				7AC905FF249E026A00AB8827 /* Frameworks */,
+				7AC90600249E026A00AB8827 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7AC90604249E026A00AB8827 /* PBXTargetDependency */,
+			);
+			name = "Coctails DBTests";
+			productName = "Coctails DBTests";
+			productReference = 7AC90602249E026A00AB8827 /* Coctails DBTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7AC905E4249E026800AB8827 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Oleh Haistruk";
+				TargetAttributes = {
+					7AC905EB249E026800AB8827 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					7AC90601249E026A00AB8827 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 7AC905EB249E026800AB8827;
+					};
+				};
+			};
+			buildConfigurationList = 7AC905E7249E026800AB8827 /* Build configuration list for PBXProject "Coctails DB" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7AC905E3249E026800AB8827;
+			productRefGroup = 7AC905ED249E026800AB8827 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7AC905EB249E026800AB8827 /* Coctails DB */,
+				7AC90601249E026A00AB8827 /* Coctails DBTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7AC905EA249E026800AB8827 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AC905FC249E026A00AB8827 /* LaunchScreen.storyboard in Resources */,
+				7AC905F9249E026A00AB8827 /* Assets.xcassets in Resources */,
+				7AC905F7249E026800AB8827 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AC90600249E026A00AB8827 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7AC905E8249E026800AB8827 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AC905F4249E026800AB8827 /* ViewController.swift in Sources */,
+				7AC905F0249E026800AB8827 /* AppDelegate.swift in Sources */,
+				7AC905F2249E026800AB8827 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AC905FE249E026A00AB8827 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AC90607249E026A00AB8827 /* Coctails_DBTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7AC90604249E026A00AB8827 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7AC905EB249E026800AB8827 /* Coctails DB */;
+			targetProxy = 7AC90603249E026A00AB8827 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7AC905F5249E026800AB8827 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7AC905F6249E026800AB8827 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7AC905FA249E026A00AB8827 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7AC905FB249E026A00AB8827 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7AC90609249E026A00AB8827 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7AC9060A249E026A00AB8827 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7AC9060C249E026A00AB8827 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A9J8464N7L;
+				INFOPLIST_FILE = "Coctails DB/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "OG.Coctails-DB";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7AC9060D249E026A00AB8827 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A9J8464N7L;
+				INFOPLIST_FILE = "Coctails DB/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "OG.Coctails-DB";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7AC9060F249E026A00AB8827 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A9J8464N7L;
+				INFOPLIST_FILE = "Coctails DBTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "OG.Coctails-DBTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coctails DB.app/Coctails DB";
+			};
+			name = Debug;
+		};
+		7AC90610249E026A00AB8827 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A9J8464N7L;
+				INFOPLIST_FILE = "Coctails DBTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "OG.Coctails-DBTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coctails DB.app/Coctails DB";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7AC905E7249E026800AB8827 /* Build configuration list for PBXProject "Coctails DB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AC90609249E026A00AB8827 /* Debug */,
+				7AC9060A249E026A00AB8827 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AC9060B249E026A00AB8827 /* Build configuration list for PBXNativeTarget "Coctails DB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AC9060C249E026A00AB8827 /* Debug */,
+				7AC9060D249E026A00AB8827 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AC9060E249E026A00AB8827 /* Build configuration list for PBXNativeTarget "Coctails DBTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AC9060F249E026A00AB8827 /* Debug */,
+				7AC90610249E026A00AB8827 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7AC905E4249E026800AB8827 /* Project object */;
+}
