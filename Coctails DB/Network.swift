@@ -20,7 +20,9 @@ class Network {
     
     func getDrincsOf(category: String) /*->  */{
         let parameters: [String: String] = ["c": category]
-        AF.request(Constants.drinksBaseURL, parameters: parameters).validate().responseDecodable(of: DrinkDetails.self) { (responce) in
+        AF.request(Constants.drinksBaseURL, parameters: parameters)
+            .validate()
+            .responseDecodable(of: DrinkDetails.self) { (responce) in
             debugPrint(responce)
         }
     }
