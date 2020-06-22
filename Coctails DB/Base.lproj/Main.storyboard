@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Th0-XJ-XJZ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="817"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pT0-mW-SaI">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="768"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="777"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="filterCell" id="kBr-Ey-JNn" customClass="FilterCell" customModule="Coctails_DB" customModuleProvider="target">
@@ -60,7 +60,7 @@
                                         </prototypes>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwI-Xf-ZbR" customClass="ApplyFiltersButton" customModule="Coctails_DB" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="768" width="414" height="40"/>
+                                        <rect key="frame" x="0.0" y="777" width="414" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="WfA-N8-EDO"/>
                                         </constraints>
@@ -76,7 +76,7 @@
                         <constraints>
                             <constraint firstItem="Th0-XJ-XJZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Gn-l0-vbE"/>
                             <constraint firstItem="Th0-XJ-XJZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Bgd-3n-zEH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Th0-XJ-XJZ" secondAttribute="bottom" constant="10" id="d4K-9P-NDr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Th0-XJ-XJZ" secondAttribute="bottom" constant="1" id="d4K-9P-NDr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Th0-XJ-XJZ" secondAttribute="trailing" id="mYH-an-EKJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

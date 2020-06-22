@@ -8,6 +8,7 @@
 import UIKit
 
 class NetworkDataManager {
+    
     let network = Network()
     typealias InitialReturnType = ([DrinksAssests]?, DrinkCategory?) -> Void
     
@@ -34,41 +35,49 @@ class NetworkDataManager {
             dispatchGroup.wait()
         }
         
-        let drinksOperation = BlockOperation {
+        let getAssetsOperation  = BlockOperation {
             let dispatchGroup = DispatchGroup()
             dispatchGroup.enter()
-            
-            guard let category = listOfAllCategories?.categories.first?.drinkCategory else { return }
-            self.network.getDrincsOf(category: category) { (result) in
-                switch result {
-                case .success(let drinksData):
-                    drinks = drinksData
-                    dispatchGroup.leave()
-                case .failure(let error):
-                    debugPrint(error.localizedDescription)
-                }
-            }
-            dispatchGroup.wait()
-        }
-        
-        let drinksAssetsOperation = BlockOperation {
-            let dispatchGroup = DispatchGroup()
-            dispatchGroup.enter()
-            
-            guard let drinksList = drinks, let category = listOfAllCategories?.categories.first?.drinkCategory else { return }
-            self.network.getDrinksAssets(drinksList: drinksList, category: category) { (assets) in
+            self.getCategoryAssets(category: (listOfAllCategories?.categories.first?.drinkCategory)!) { (assets) in
                 completion(assets, listOfAllCategories)
                 dispatchGroup.leave()
-            }
-            dispatchGroup.wait()
-            
+                }
         }
+//        let drinksOperation = BlockOperation {
+//            let dispatchGroup = DispatchGroup()
+//            dispatchGroup.enter()
+//
+//            guard let category = listOfAllCategories?.categories.first?.drinkCategory else { return }
+//            self.network.getDrincsOf(category: category) { (result) in
+//                switch result {
+//                case .success(let drinksData):
+//                    drinks = drinksData
+//                    dispatchGroup.leave()
+//                case .failure(let error):
+//                    debugPrint(error.localizedDescription)
+//                }
+//            }
+//            dispatchGroup.wait()
+//        }
+//
+//        let drinksAssetsOperation = BlockOperation {
+//            let dispatchGroup = DispatchGroup()
+//            dispatchGroup.enter()
+//
+//            guard let drinksList = drinks, let category = listOfAllCategories?.categories.first?.drinkCategory else { return }
+//            self.network.getDrinksAssets(drinksList: drinksList, category: category) { (assets) in
+//                completion(assets, listOfAllCategories)
+//                dispatchGroup.leave()
+//            }
+//            dispatchGroup.wait()
+//
+//        }
         
         queue.addOperation(categoriesOpreation)
-        drinksOperation.addDependency(categoriesOpreation)
-        queue.addOperation(drinksOperation)
-        drinksAssetsOperation.addDependency(drinksOperation)
-        queue.addOperation(drinksAssetsOperation)
+        getAssetsOperation.addDependency(categoriesOpreation)
+        queue.addOperation(getAssetsOperation)
+//        drinksAssetsOperation.addDependency(drinksOperation)
+//        queue.addOperation(drinksAssetsOperation)
     }
     
     

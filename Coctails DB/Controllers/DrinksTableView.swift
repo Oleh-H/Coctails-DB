@@ -19,12 +19,17 @@ class DrinksTableView: UITableViewController, Storyboarded, FilterViewController
         willSet(newList) {
             guard let categoriesCount = newList?.categories.count else { return }
             selectedCategoriesNumber = categoriesCount
+            categoryCounter = 0
+            print(newList)
+            
+            fetchCategoryAndUpdateTable()
         }
     }
     var drinks: DrinksParametersList?
     var drinksAssets: [[DrinksAssests]]?
     var categoryCounter = 0
     var selectedCategoriesNumber = 0
+    var firstLoad = true
     
 
     override func viewDidLoad() {
@@ -45,18 +50,31 @@ class DrinksTableView: UITableViewController, Storyboarded, FilterViewController
                 self.listOfAllCategories = categories
                 self.categoriesSelectedInFilter = categories
                 self.tableView.reloadData()
-                debugPrint(self.drinksAssets)
             }
         }
+        
+        firstLoad = !firstLoad
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        if !firstLoad {
+            drinksAssets = []
+            tableView.reloadData()
+            fetchCategoryAndUpdateTable()
+        }
     }
     
+    
+    func fetchCategoryAndUpdateTable() {
+        guard let category = categoriesSelectedInFilter?.categories[categoryCounter].drinkCategory else { return }
+        networkDataManager.getCategoryAssets(category: category) { (assets) in
+            self.drinksAssets?.append(assets!)
+            self.tableView.reloadData()
+        }
+    }
 
     @objc func navigateToFilter() {
-        mainCoordinator?.displayFilter(allCategories: listOfAllCategories)
+        mainCoordinator?.displayFilter(allCategories: listOfAllCategories, parrent: self)
         
     }
     
@@ -93,11 +111,7 @@ class DrinksTableView: UITableViewController, Storyboarded, FilterViewController
         guard let totalRowsNumber = drinksAssets?[indexPath.section].count  else { return }
         if indexPath.section == categoryCounter && indexPath.row == (totalRowsNumber - 1) && selectedCategoriesNumber != (categoryCounter + 1) {
             categoryCounter += 1
-            guard let category = categoriesSelectedInFilter?.categories[categoryCounter].drinkCategory else { return }
-            networkDataManager.getCategoryAssets(category: category) { (assets) in
-                self.drinksAssets?.append(assets!)
-                tableView.reloadData()
-            }
+            fetchCategoryAndUpdateTable()
         }
     }
 

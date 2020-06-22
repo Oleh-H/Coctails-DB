@@ -17,7 +17,7 @@ class ApplyFiltersButton: UIButton {
         self.titleLabel?.textColor = .white
         self.setTitleColor(.white, for: .normal)
         self.backgroundColor = UIColor.black
-        
+        self.setTitle("APPLY", for: .normal)
 
     }
 

@@ -24,10 +24,11 @@ class MainCoordinator: Coordinator {
     }
     ///Perform navigation to `FilerViewController`
     
-    func displayFilter(allCategories: DrinkCategory?) {
+    func displayFilter(allCategories: DrinkCategory?, parrent: FilterViewControllerDelegate) {
         let vc = FilterViewController.instantiate()
         vc.mainCoordinator = self
         vc.allCategories = allCategories
+        vc.delegate = parrent
         navigationController.pushViewController(vc, animated: true)
     }
     

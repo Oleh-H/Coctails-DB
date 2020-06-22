@@ -46,7 +46,6 @@ class FilterViewController: UIViewController, Storyboarded {
         categories.forEach { (_) in
             ticks.append(true)
         }
-        debugPrint(ticks)
     }
 
     @IBAction func applyButton(_ sender: Any) {
@@ -64,6 +63,8 @@ class FilterViewController: UIViewController, Storyboarded {
     }
 
 }
+
+
 
 extension FilterViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -83,7 +84,6 @@ extension FilterViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedTick = ticks[indexPath.row]
         ticks[indexPath.row] = !selectedTick
-        debugPrint(ticks)
         tableView.reloadData()
     }
     
