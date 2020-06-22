@@ -15,6 +15,8 @@ class ApplyFiltersButton: UIButton {
         super.init(coder: aDecoder)
 
         self.titleLabel?.textColor = .white
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.white.cgColor
         self.setTitleColor(.white, for: .normal)
         self.backgroundColor = UIColor.black
         self.setTitle("APPLY", for: .normal)

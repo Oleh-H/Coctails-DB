@@ -27,7 +27,6 @@ class FilterViewController: UIViewController, Storyboarded {
         tableView.delegate = self
         tableView.dataSource = self
         
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         let backImage = UIImage(systemName: "arrow.left")
         self.navigationController?.navigationBar.backIndicatorImage = backImage
         self.navigationController?.navigationBar.tintColor = .black

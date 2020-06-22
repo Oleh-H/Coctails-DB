@@ -32,6 +32,8 @@ class DrinksTableView: UITableViewController, Storyboarded, FilterViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //set for next viewController
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
         let title = UILabel()
         title.textAlignment = .left
@@ -41,6 +43,7 @@ class DrinksTableView: UITableViewController, Storyboarded, FilterViewController
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "funnel"), style: .plain, target: self, action: #selector(navigateToFilter))
         self.navigationItem.rightBarButtonItem?.tintColor = .black
+        self.navigationItem.rightBarButtonItem?.isEnabled = false
         
         networkDataManager.getInitialData { (assets, categories) in
             if let assets = assets {
@@ -48,6 +51,7 @@ class DrinksTableView: UITableViewController, Storyboarded, FilterViewController
                 self.listOfAllCategories = categories
                 self.categoriesSelectedInFilter = categories
                 self.tableView.reloadData()
+                self.navigationItem.rightBarButtonItem?.isEnabled = true
             }
         }
         
