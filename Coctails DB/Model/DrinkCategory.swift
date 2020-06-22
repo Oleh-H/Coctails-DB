@@ -15,5 +15,9 @@ struct DrinkCategory: Decodable {
 }
 
 struct CategoryName: Decodable {
-    let strCategory: String
+    let drinkCategory: String
+    
+    enum CodingKeys: String, CodingKey {
+        case drinkCategory = "strCategory"
+    }
 }

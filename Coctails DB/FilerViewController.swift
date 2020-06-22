@@ -9,8 +9,8 @@
 import UIKit
 
 class FilerViewController: UIViewController, Storyboarded {
-    let network = Network()
     weak var mainCoordinator: MainCoordinator?
+    var allCategories: DrinkCategory?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +25,7 @@ class FilerViewController: UIViewController, Storyboarded {
         title.text = "Drinks"
         self.navigationItem.titleView = title
         
-        network.getDrinkCategories()
-        network.getDrincsOf(category: "Ordinary Drink")
+        debugPrint(allCategories)
     }
 
 

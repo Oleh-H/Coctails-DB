@@ -24,9 +24,10 @@ class MainCoordinator: Coordinator {
     }
     ///Perform navigation to `FilerViewController`
     
-    func displayFilter() {
+    func displayFilter(allCategories: DrinkCategory?) {
         let vc = FilerViewController.instantiate()
         vc.mainCoordinator = self
+        vc.allCategories = allCategories
         navigationController.pushViewController(vc, animated: true)
     }
 }
