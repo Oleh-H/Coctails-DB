@@ -8,16 +8,23 @@
 
 import UIKit
 
-class DrinksTableView: UITableViewController, Storyboarded {
+class DrinksTableView: UITableViewController, Storyboarded, FilterViewControllerDelegate {
     
     weak var mainCoordinator: MainCoordinator?
-    let network = Network()
+//    let network = Network()
     let networkDataManager = NetworkDataManager()
     
     private var listOfAllCategories: DrinkCategory?
-    var categoriesSelectedInFilter: DrinkCategory?
+    var categoriesSelectedInFilter: DrinkCategory? {
+        willSet(newList) {
+            guard let categoriesCount = newList?.categories.count else { return }
+            selectedCategoriesNumber = categoriesCount
+        }
+    }
     var drinks: DrinksParametersList?
     var drinksAssets: [[DrinksAssests]]?
+    var categoryCounter = 0
+    var selectedCategoriesNumber = 0
     
 
     override func viewDidLoad() {
@@ -42,6 +49,11 @@ class DrinksTableView: UITableViewController, Storyboarded {
             }
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
 
     @objc func navigateToFilter() {
         mainCoordinator?.displayFilter(allCategories: listOfAllCategories)
@@ -69,6 +81,7 @@ class DrinksTableView: UITableViewController, Storyboarded {
         let assets = drinksAssets[indexPath.row]
         cell.drinkName.text = assets.name
         cell.drinkImage.image = assets.image
+    
         return cell
     }
     
@@ -78,8 +91,13 @@ class DrinksTableView: UITableViewController, Storyboarded {
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let totalRowsNumber = drinksAssets?[indexPath.section].count  else { return }
-        if indexPath.row == (totalRowsNumber - 1) {
-            debugPrint(indexPath)
+        if indexPath.section == categoryCounter && indexPath.row == (totalRowsNumber - 1) && selectedCategoriesNumber != (categoryCounter + 1) {
+            categoryCounter += 1
+            guard let category = categoriesSelectedInFilter?.categories[categoryCounter].drinkCategory else { return }
+            networkDataManager.getCategoryAssets(category: category) { (assets) in
+                self.drinksAssets?.append(assets!)
+                tableView.reloadData()
+            }
         }
     }
 

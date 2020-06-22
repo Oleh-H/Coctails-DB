@@ -7,29 +7,87 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Filer View Controller-->
+        <!--Filter View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="FilerViewController" id="BYZ-38-t0r" customClass="FilerViewController" customModule="Coctails_DB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FilterViewController" id="BYZ-38-t0r" customClass="FilterViewController" customModule="Coctails_DB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drinks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fvv-0J-YfJ">
-                                <rect key="frame" x="161" y="274" width="49" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Th0-XJ-XJZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="808"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pT0-mW-SaI">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="768"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="filterCell" id="kBr-Ey-JNn" customClass="FilterCell" customModule="Coctails_DB" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="74"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kBr-Ey-JNn" id="2RJ-go-IzH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDk-b2-o19">
+                                                            <rect key="frame" x="20" y="20" width="324" height="34"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QnI-Ez-lYn">
+                                                            <rect key="frame" x="364" y="20" width="25" height="34"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="DDk-b2-o19" firstAttribute="top" secondItem="2RJ-go-IzH" secondAttribute="top" constant="20" id="5LF-Q9-e2V"/>
+                                                        <constraint firstItem="DDk-b2-o19" firstAttribute="leading" secondItem="2RJ-go-IzH" secondAttribute="leading" constant="20" id="CN7-Pa-peb"/>
+                                                        <constraint firstAttribute="bottom" secondItem="DDk-b2-o19" secondAttribute="bottom" constant="20" id="CNl-68-Smv"/>
+                                                        <constraint firstAttribute="bottom" secondItem="QnI-Ez-lYn" secondAttribute="bottom" constant="20" id="DMs-Be-gpO"/>
+                                                        <constraint firstItem="QnI-Ez-lYn" firstAttribute="leading" secondItem="DDk-b2-o19" secondAttribute="trailing" constant="20" id="Rn2-fO-XKX"/>
+                                                        <constraint firstAttribute="trailing" secondItem="QnI-Ez-lYn" secondAttribute="trailing" constant="25" id="S3s-f0-pfl"/>
+                                                        <constraint firstItem="QnI-Ez-lYn" firstAttribute="top" secondItem="2RJ-go-IzH" secondAttribute="top" constant="20" id="n0D-Fb-M8B"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="categoryName" destination="DDk-b2-o19" id="Bw4-g0-n8h"/>
+                                                    <outlet property="tick" destination="QnI-Ez-lYn" id="MyD-PC-xon"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwI-Xf-ZbR" customClass="ApplyFiltersButton" customModule="Coctails_DB" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="768" width="414" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="WfA-N8-EDO"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="applyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rd5-Op-7kg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Th0-XJ-XJZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Gn-l0-vbE"/>
+                            <constraint firstItem="Th0-XJ-XJZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Bgd-3n-zEH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Th0-XJ-XJZ" secondAttribute="bottom" constant="10" id="d4K-9P-NDr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Th0-XJ-XJZ" secondAttribute="trailing" id="mYH-an-EKJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="pT0-mW-SaI" id="Vro-Gy-hzp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2655" y="90"/>
+            <point key="canvasLocation" x="2653.6231884057975" y="89.732142857142847"/>
         </scene>
         <!--Drinks-->
         <scene sceneID="NMe-gK-KqL">
