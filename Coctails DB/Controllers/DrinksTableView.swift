@@ -20,9 +20,7 @@ class DrinksTableView: UITableViewController, Storyboarded, FilterViewController
             guard let categoriesCount = newList?.categories.count else { return }
             selectedCategoriesNumber = categoriesCount
             categoryCounter = 0
-            print(newList)
-            
-            fetchCategoryAndUpdateTable()
+           
         }
     }
     var drinks: DrinksParametersList?
@@ -53,7 +51,6 @@ class DrinksTableView: UITableViewController, Storyboarded, FilterViewController
             }
         }
         
-        firstLoad = !firstLoad
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,11 +58,14 @@ class DrinksTableView: UITableViewController, Storyboarded, FilterViewController
             drinksAssets = []
             tableView.reloadData()
             fetchCategoryAndUpdateTable()
+        } else {
+            firstLoad = !firstLoad
         }
     }
     
     
     func fetchCategoryAndUpdateTable() {
+        
         guard let category = categoriesSelectedInFilter?.categories[categoryCounter].drinkCategory else { return }
         networkDataManager.getCategoryAssets(category: category) { (assets) in
             self.drinksAssets?.append(assets!)
