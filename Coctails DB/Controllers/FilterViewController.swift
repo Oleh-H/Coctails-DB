@@ -17,6 +17,7 @@ class FilterViewController: UIViewController, Storyboarded {
     weak var delegate: FilterViewControllerDelegate?
     
     var allCategories: DrinkCategory?
+    ///Contains array of bull that means category selected or not.
     var ticks = [Bool]()
     
     @IBOutlet weak var tableView: UITableView!

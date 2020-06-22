@@ -25,7 +25,9 @@ class DrinksTableView: UITableViewController, Storyboarded, FilterViewController
     }
     var drinks: DrinksParametersList?
     var drinksAssets: [[DrinksAssests]]?
+    ///Contains the number for last loaded category
     var categoryCounter = 0
+    ///Number of categories selected in filter
     var selectedCategoriesNumber = 0
     var firstLoad = true
     
@@ -67,7 +69,7 @@ class DrinksTableView: UITableViewController, Storyboarded, FilterViewController
         }
     }
     
-    
+    ///Fetches data for displaying in table, apply and reload table.
     func fetchCategoryAndUpdateTable() {
         
         guard let category = categoriesSelectedInFilter?.categories[categoryCounter].drinkCategory else { return }
