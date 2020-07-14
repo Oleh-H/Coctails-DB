@@ -129,11 +129,11 @@
 		7A9911FC249F30BF003395EA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7A9911ED249E074C003395EA /* Constants.swift */,
 				7A9911E8249E0540003395EA /* DrinksParametersList.swift */,
 				7A9911E7249E053F003395EA /* DrinkCategory.swift */,
 				7ABB6EF2249FAC73001B4049 /* DrinksAssests.swift */,
 				7A9911FD249F30DE003395EA /* Newtwork */,
-				7A9911ED249E074C003395EA /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

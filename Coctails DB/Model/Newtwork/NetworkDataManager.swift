@@ -17,16 +17,15 @@ class NetworkDataManager {
         var listOfAllCategories: DrinkCategory?
         
         let queue = OperationQueue()
+        let dispatchGroup = DispatchGroup()
         
         let categoriesOpreation = BlockOperation {
-            let dispatchGroup = DispatchGroup()
             dispatchGroup.enter()
-            
             self.network.getDrinkCategories { (result) in
+                defer { dispatchGroup.leave() }
                 switch result {
                 case .success(let drinkCategories):
                     listOfAllCategories = drinkCategories
-                    dispatchGroup.leave()
                 case .failure(let error):
                     debugPrint(error.localizedDescription)
                 }
@@ -35,7 +34,6 @@ class NetworkDataManager {
         }
         
         let getAssetsOperation  = BlockOperation {
-            let dispatchGroup = DispatchGroup()
             dispatchGroup.enter()
             self.getCategoryAssets(category: (listOfAllCategories?.categories.first?.drinkCategory)!) { (assets) in
                 completion(assets, listOfAllCategories)
@@ -53,16 +51,16 @@ class NetworkDataManager {
     func getCategoryAssets(category: String, completion: @escaping ([DrinksAssests]?) -> Void) {
         var drinks: DrinksParametersList?
         let queue = OperationQueue()
+        let dispatchGroup = DispatchGroup()
         
         let drinksOperation = BlockOperation {
-            let dispatchGroup = DispatchGroup()
             dispatchGroup.enter()
             
             self.network.getDrincsOf(category: category) { (result) in
+                defer { dispatchGroup.leave() }
                 switch result {
                 case .success(let drinksData):
                     drinks = drinksData
-                    dispatchGroup.leave()
                 case .failure(let error):
                     debugPrint(error.localizedDescription)
                 }
@@ -71,16 +69,13 @@ class NetworkDataManager {
         }
         
         let drinksAssetsOperation = BlockOperation {
-            let dispatchGroup = DispatchGroup()
             dispatchGroup.enter()
             
             guard let drinksList = drinks else { return }
             self.network.getDrinksAssets(drinksList: drinksList, category: category) { (assets) in
                 completion(assets)
                 dispatchGroup.leave()
-            }
-            dispatchGroup.wait()
-            
+            }            
         }
         
         queue.addOperation(drinksOperation)
